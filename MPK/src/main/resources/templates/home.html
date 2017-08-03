@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Main</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap/bootstrap.css}"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/home.css}"/>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+        </div>
+        <div id="input-container" class="col-lg-4">
+            <form th:action="@{/line-info}">
+                <div class="form-group">
+                    <label for="text-field">Numer linii:</label>
+                    <input class="form-control" required="" id="text-field" name="lineNumber"
+                           placeholder="np.501"/>
+
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" class="btn btn-default">Submit</button>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
+
+</body>
+</html>
