@@ -18,13 +18,13 @@
         <div class="col-lg-6">
             <div class="stops-container">
                 <div class="direction-head">
-                    <span th:each="stop,iterStat : ${stopsFirstDir}" th:text="${stop.name}"
+                    <span th:each="stop,iterStat : ${line.getStopsDirectionFirst()}" th:text="${stop.name}"
                           th:if="${iterStat.first}"></span>
                     <span class="glyphicon glyphicon glyphicon-menu-right"></span>
-                    <span th:each="stop,iterStat : ${stopsFirstDir}" th:text="${stop.name}"
+                    <span th:each="stop,iterStat : ${line.getStopsDirectionFirst()}" th:text="${stop.name}"
                           th:if="${iterStat.last}"></span>
                 </div>
-                <div th:each="stop : ${stopsFirstDir}">
+                <div th:each="stop : ${line.getStopsDirectionFirst()}">
                     <h4 th:text="${stop.name}"></h4>
                 </div>
             </div>
@@ -32,13 +32,13 @@
         <div class="col-lg-6">
             <div class="stops-container">
                 <div class="direction-head">
-                    <span th:each="stop,iterStat : ${stopsSecondDir}" th:text="${stop.name}"
+                    <span th:each="stop,iterStat : ${line.getStopsDirectionSecond()}" th:text="${stop.name}"
                           th:if="${iterStat.first}"></span>
                     <span class="glyphicon glyphicon glyphicon-menu-right"></span>
-                    <span th:each="stop,iterStat : ${stopsSecondDir}" th:text="${stop.name}"
+                    <span th:each="stop,iterStat : ${line.getStopsDirectionSecond()}" th:text="${stop.name}"
                           th:if="${iterStat.last}"></span>
                 </div>
-                <div th:each="stop : ${stopsSecondDir}">
+                <div th:each="stop : ${line.getStopsDirectionSecond()}">
                     <h4 th:text="${stop.name}"></h4>
                 </div>
             </div>

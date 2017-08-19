@@ -16,7 +16,7 @@ public class Stop implements Comparable<Stop> {
     @Transient
     private String refLink;
     @Transient
-    private List<Departure> departures;
+    private List<Departures> departures;
 
     public enum Direction {
         FIRST, SECOND
@@ -63,11 +63,11 @@ public class Stop implements Comparable<Stop> {
         this.refLink = refLink;
     }
 
-    public List<Departure> getDepartures() {
+    public List<Departures> getDepartures() {
         return departures;
     }
 
-    public void setDepartures(List<Departure> departures) {
+    public void setDepartures(List<Departures> departures) {
         this.departures = departures;
     }
 
